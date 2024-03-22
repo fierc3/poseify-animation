@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  poseify-animation:
+    build:
+      context: /app
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: C:/share/poseify
+        target: /poseify
+    networks:
+      - poseify-dev-net
+
+networks:
+  poseify-dev-net:
+    name: poseify-dev-net
+    external: true

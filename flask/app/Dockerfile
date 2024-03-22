@@ -34,3 +34,5 @@ EXPOSE 80
 
 # Define environment variable
 ENV NAME Poseify-Animation
+
+CMD ["flask", "run", "--host=0.0.0.0"]
